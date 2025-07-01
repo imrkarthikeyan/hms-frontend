@@ -52,32 +52,42 @@ export default function RoomDetails(){
     };
 
 
-    return(
-        <div className="pl-5">
-            <h2 className="mt-10 font-bold text-xl">Room Details</h2>
-            
-            <table className="mt-3 border border-none border-separate border-spacing-y-4 border-spacing-x-4">
-                <tr>
-                    <td><strong>Room No :</strong></td><td>{room.roomNumber}</td>
-                </tr>
-                <tr className="">
-                    <td><strong>Block :</strong></td><td>{room.block}</td>
-                </tr>
-                <tr>
-                    <td><strong>Total Occupancy :</strong></td><td>{room.capacity}</td>
-                </tr>
-                <tr>
-                    <td><strong>Current Occupancy :</strong></td><td>{room.currentOccupancy}</td>
-                </tr>
-            </table>
-            <h3 className="mt-10 font-bold text-xl">Room Members:</h3>
-            <ul className="list-disc ml-10 mt-5">
-                {room.students.map((student, index) => (
-                <li key={index} className="mt-3">
-                    {student.name} - {student.contactNumber}
-                </li>
-                ))}
-            </ul>
+    return (
+    <div className="min-h-screen flex justify-center items-start pt-10">
+        <div className="bg-white p-10 rounded shadow w-full max-w-2xl">
+        <h2 className="font-bold text-2xl text-center mb-8">Room Details</h2>
+
+        <table className="w-full table-fixed border-separate border-spacing-y-4 border-spacing-x-6 mb-10">
+            <tbody>
+            <tr>
+                <td className="font-semibold w-1/3">Room No:</td>
+                <td>{room.roomNumber}</td>
+            </tr>
+            <tr>
+                <td className="font-semibold">Block:</td>
+                <td>{room.block}</td>
+            </tr>
+            <tr>
+                <td className="font-semibold">Total Occupancy:</td>
+                <td>{room.capacity}</td>
+            </tr>
+            <tr>
+                <td className="font-semibold">Current Occupancy:</td>
+                <td>{room.currentOccupancy}</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h3 className="font-bold text-2xl mb-4">Room Members</h3>
+        <ul className="list-disc pl-6 space-y-2">
+            {room.students.map((student, index) => (
+            <li key={index}>
+                {student.name} – {student.contactNumber}
+            </li>
+            ))}
+        </ul>
         </div>
+    </div>
     );
+
 };

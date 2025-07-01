@@ -30,33 +30,45 @@ export default function Profile(){
     }
 
 
-    return(
-        <div className="pl-5">
-            <h2 className="mt-10 font-bold text-xl">Student Profile</h2>
-            
-            <table className="mt-10 border border-none border-separate border-spacing-y-4 border-spacing-x-4">
-                <tr>
-                    <td><strong>Name :</strong></td><td>{student.name}</td>
-                </tr>
-                <tr className="">
-                    <td><strong>Email :</strong></td><td>{student.email}</td>
-                </tr>
-                <tr>
-                    <td><strong>College Name :</strong></td><td>{student.collegeName}</td>
-                </tr>
-                <tr>
-                    <td><strong>Room No :</strong></td><td>{student.room ? student.room.roomNumber : "Not assigned"}</td>
-                </tr>
-                <tr>
-                    <td><strong>Contact No :</strong></td><td>{student.contactNumber}</td>
-                </tr>
-                <tr>
-                    <td><strong>Warden Name :</strong></td><td>{student.warden ? student.warden.name : "Not assigned"}</td>
-                </tr>
-                <tr>
-                    <td><strong>Warden Contact No :</strong></td><td>{student.warden ? student.warden.contactNumber : "Not assigned"}</td>
-                </tr>
-            </table>
+    return (
+    <div className="min-h-screen flex justify-center items-start pt-10">
+        <div className="bg-white p-10 rounded shadow w-full max-w-2xl">
+        <h2 className="font-bold text-2xl text-center mb-10">Student Profile</h2>
+
+        <table className="w-full table-fixed border-separate border-spacing-y-4 border-spacing-x-6">
+            <tbody>
+            <tr>
+                <td className="font-semibold w-1/3">Name:</td>
+                <td>{student.name}</td>
+            </tr>
+            <tr>
+                <td className="font-semibold">Email:</td>
+                <td>{student.email}</td>
+            </tr>
+            <tr>
+                <td className="font-semibold">College Name:</td>
+                <td>{student.collegeName}</td>
+            </tr>
+            <tr>
+                <td className="font-semibold">Room No:</td>
+                <td>{student.room ? student.room.roomNumber : "Not assigned"}</td>
+            </tr>
+            <tr>
+                <td className="font-semibold">Contact No:</td>
+                <td>{student.contactNumber}</td>
+            </tr>
+            <tr>
+                <td className="font-semibold">Warden Name:</td>
+                <td>{student.warden ? student.warden.name : "Not assigned"}</td>
+            </tr>
+            <tr>
+                <td className="font-semibold">Warden Contact No:</td>
+                <td>{student.warden ? student.warden.contactNumber : "Not assigned"}</td>
+            </tr>
+            </tbody>
+        </table>
         </div>
+    </div>
     );
+
 };

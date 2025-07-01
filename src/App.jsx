@@ -11,6 +11,9 @@ import RoomDetails from './pages/student/RoomDetails';
 import SubmitComplaint from './pages/student/SubmitComplaint';
 import ViewComplaints from './pages/student/ViewComplaints';
 import MessMenu from './pages/student/MessMenu';
+import VisitRequest from './pages/student/VisitRequest';
+import PastVisitRequests from './pages/student/PastVisitRequests';
+import Fees from './pages/student/Fees';
 
 function App() {
 
@@ -32,6 +35,9 @@ function App() {
           <Route path='submit-complaint' element={<SubmitComplaint/>}/>
           <Route path='view-complaints' element={<ViewComplaints/>}/>
           <Route path='mess-menu' element={<MessMenu/>}/>
+          <Route path='visit-request' element={<VisitRequest/>}/>
+          <Route path='my-visits' element={<PastVisitRequests/>}/>
+          <Route path='fees' element={<Fees/>}/>
         </Route>
 
       </Routes>

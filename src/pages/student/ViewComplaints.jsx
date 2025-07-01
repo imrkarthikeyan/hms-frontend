@@ -37,7 +37,7 @@ export default function ViewComplaints(){
 
     return(
         <div className="p-6 w-full">
-            <h2 className="mt-10 font-bold text-xl py-10">Your past Complaints</h2>
+            <h2 className="mt-10 font-bold text-2xl py-10">Your past Complaints</h2>
             {complaints.length===0 ? (
                 <p>No complaints submitted yet.</p>
             ) : (

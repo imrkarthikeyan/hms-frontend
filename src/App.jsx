@@ -4,6 +4,13 @@ import RoleSelect from './pages/Auth/RoleSelect'
 import SignupStudent from './pages/Auth/SignupStudent';
 import LoginStudent from './pages/Auth/LoginStudent';
 import LoginWarden from './pages/Auth/LoginWarden';
+import ProtectedRoute from './pages/components/ProtectedRoute';
+import Dashboard from './pages/student/Dashboard';
+import Profile from './pages/student/Profile';
+import RoomDetails from './pages/student/RoomDetails';
+import SubmitComplaint from './pages/student/SubmitComplaint';
+import ViewComplaints from './pages/student/ViewComplaints';
+import MessMenu from './pages/student/MessMenu';
 
 function App() {
 
@@ -14,6 +21,19 @@ function App() {
         <Route path='/signup/student' element={<SignupStudent/>}/>
         <Route path='/login/student' element={<LoginStudent/>}/>
         <Route path='/login/warden' element={<LoginWarden/>}/>
+
+        <Route path='/student/dashboard' element={
+          <ProtectedRoute role="student">
+            <Dashboard/>
+          </ProtectedRoute>
+        }>
+          <Route path='profile' element={<Profile/>}/>
+          <Route path='room' element={<RoomDetails/>}/>
+          <Route path='submit-complaint' element={<SubmitComplaint/>}/>
+          <Route path='view-complaints' element={<ViewComplaints/>}/>
+          <Route path='mess-menu' element={<MessMenu/>}/>
+        </Route>
+
       </Routes>
     </Router>
   )

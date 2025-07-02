@@ -25,7 +25,7 @@ export default function LoginWarden(){
 
       localStorage.setItem("warden",JSON.stringify(wardenData));
 
-      navigate('/warden/dashboard');
+      navigate('/warden/dashboard/profile');
 
     }
     catch(error){

@@ -14,6 +14,12 @@ import MessMenu from './pages/student/MessMenu';
 import VisitRequest from './pages/student/VisitRequest';
 import PastVisitRequests from './pages/student/PastVisitRequests';
 import Fees from './pages/student/Fees';
+import WardenProfile from './warden/WardenProfile';
+import WardenDashboard from './warden/WardenDashboard';
+import ViewStudents from './warden/ViewStudents';
+import ViewRooms from './warden/ViewRooms';
+import UpdateMenu from './warden/UpdateMenu';
+import ManageVisitors from './warden/ManageVisitors';
 
 function App() {
 
@@ -38,6 +44,19 @@ function App() {
           <Route path='visit-request' element={<VisitRequest/>}/>
           <Route path='my-visits' element={<PastVisitRequests/>}/>
           <Route path='fees' element={<Fees/>}/>
+        </Route>
+
+        <Route path='/warden/dashboard' element={
+          <ProtectedRoute role="warden">
+            <WardenDashboard/>
+          </ProtectedRoute>
+        }>
+          <Route path='profile' element={<WardenProfile/>}/>
+          <Route path='students' element={<ViewStudents/>}/>
+          <Route path='rooms' element={<ViewRooms/>}/>
+          <Route path='update-menu' element={<UpdateMenu/>}/>
+          <Route path='manage-visitors' element={<ManageVisitors/>}/>
+
         </Route>
 
       </Routes>

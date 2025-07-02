@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 export default function Sidebar(){
 
-    const handleLogout=()=>{
+    const handleLogout = () => {
         localStorage.removeItem("student");
-        window.location.href="/";
+        window.location.href = "/login/warden";
     };
 
     return(

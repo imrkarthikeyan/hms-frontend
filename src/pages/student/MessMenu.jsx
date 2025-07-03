@@ -35,7 +35,7 @@ export default function MessMenu(){
 
 
     return (
-    <div className="min-h-screen flex justify-center items-start pt-10 bg-gray-50">
+    <div className="min-h-screen flex justify-center items-start pt-10">
         <div className="bg-white p-10 rounded shadow w-full max-w-2xl">
         <h2 className="font-bold text-2xl text-center mb-8">Today's Mess Menu</h2>
 

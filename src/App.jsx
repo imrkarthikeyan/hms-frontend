@@ -20,6 +20,8 @@ import ViewStudents from './warden/ViewStudents';
 import ViewRooms from './warden/ViewRooms';
 import UpdateMenu from './warden/UpdateMenu';
 import ManageVisitors from './warden/ManageVisitors';
+import ManageComplaints from './warden/ManageComplaints';
+import AssignStudent from './warden/AssignStudent';
 
 function App() {
 
@@ -56,6 +58,8 @@ function App() {
           <Route path='rooms' element={<ViewRooms/>}/>
           <Route path='update-menu' element={<UpdateMenu/>}/>
           <Route path='manage-visitors' element={<ManageVisitors/>}/>
+          <Route path='manage-complaints' element={<ManageComplaints/>}/>
+          <Route path='assign-student' element={<AssignStudent/>}/>
 
         </Route>
 

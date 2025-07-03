@@ -1,5 +1,7 @@
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react"
 import { useNavigate } from "react-router-dom";
+import { auth } from "../../firebase";
 
 export default function SignupStudent(){
 
@@ -25,7 +27,7 @@ export default function SignupStudent(){
         setLoading(true);
 
         try{
-            const userCred=await SignupStudent(form.email, form.password);
+            const userCred=await createUserWithEmailAndPassword(auth,form.email, form.password);
             const firebaseUid=userCred.user.uid;
             const studentData={
                 name:form.name,
@@ -73,7 +75,7 @@ export default function SignupStudent(){
                 <input name="collegeName"  placeholder="College Name" value={form.collegeName} onChange={handleChange} className="input border p-1 pl-3 rounded" required/>
                 <input name="roomNumber" value={form.roomNumber} onChange={handleChange} placeholder="Room Number" className="input border p-1 pl-3 rounded" required/>
                 <div className="text-center">
-                    <button type="submit" className="bg-[Green] w-25 p-2 text-white rounded" disabled>{loading?'Signing Up...':'Sign Up'}</button>
+                    <button type="submit" className="bg-[Green] w-25 p-2 text-white rounded" disabled={loading} >{loading?'Signing Up...':'Sign Up'}</button>
                 </div>
             </form>
         </div>

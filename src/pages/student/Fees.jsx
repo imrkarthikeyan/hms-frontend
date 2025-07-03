@@ -75,7 +75,7 @@ export default function Fees(){
             Fee update request sent successfully.
             </p>
         ) : (
-            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+            <form onSubmit={handleRequest} className="flex flex-col gap-4">
             <textarea
                 placeholder="Write your request message..."
                 rows="4"

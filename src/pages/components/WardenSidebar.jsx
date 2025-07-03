@@ -13,6 +13,7 @@ export default function WardenSidebar(){
             <nav className="flex flex-col gap-8">
                 <Link to="/warden/dashboard/profile">Profile</Link>
                 <Link to="/warden/dashboard/students">View Students</Link>
+                <Link to="/warden/dashboard/update-fees">Update Fees</Link>
                 <Link to="/warden/dashboard/rooms">View Rooms</Link>
                 <Link to="/warden/dashboard/update-menu">Update Mess Menu</Link>
                 <Link to="/warden/dashboard/manage-visitors">Manage Visitors</Link>

@@ -13,6 +13,7 @@ export default function Sidebar(){
             <nav className="flex flex-col gap-8">
                 <Link to="/student/dashboard/profile">Profile</Link>
                 <Link to="/student/dashboard/room">Room Details</Link>
+                <Link to="/student/dashboard/outpass">Request for Out Pass</Link>
                 <Link to="/student/dashboard/submit-complaint">Submit Complaint</Link>
                 <Link to="/student/dashboard/view-complaints">View Complaints</Link>
                 <Link to="/student/dashboard/mess-menu">Mess Menu</Link>

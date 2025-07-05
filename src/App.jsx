@@ -23,6 +23,8 @@ import ManageVisitors from './warden/ManageVisitors';
 import ManageComplaints from './warden/ManageComplaints';
 import AssignStudent from './warden/AssignStudent';
 import UpdateFees from './warden/UpdateFees';
+import RequestForOutPass from './pages/student/RequestForOutPass';
+import ManageOutPassRequests from './warden/ManageOutPassRequests';
 
 function App() {
 
@@ -41,6 +43,7 @@ function App() {
         }>
           <Route path='profile' element={<Profile/>}/>
           <Route path='room' element={<RoomDetails/>}/>
+          <Route path='outpass' element={<RequestForOutPass/>}/>
           <Route path='submit-complaint' element={<SubmitComplaint/>}/>
           <Route path='view-complaints' element={<ViewComplaints/>}/>
           <Route path='mess-menu' element={<MessMenu/>}/>
@@ -56,6 +59,7 @@ function App() {
         }>
           <Route path='profile' element={<WardenProfile/>}/>
           <Route path='students' element={<ViewStudents/>}/>
+          <Route path='outpass' element={<ManageOutPassRequests/>}/>
           <Route path='update-fees' element={<UpdateFees/>}/>
           <Route path='rooms' element={<ViewRooms/>}/>
           <Route path='update-menu' element={<UpdateMenu/>}/>

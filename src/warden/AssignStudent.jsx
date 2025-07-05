@@ -69,7 +69,7 @@ export default function AssignStudent(){
  };
 
   return(
-    <div className="p-6 w-full">
+    <div className="p-6 w-full mt-10">
       <h2 className="font-bold text-2xl py-6">Assign Students</h2>
 
      {message && <p className="text-green-600 mb-4">{message}</p>}

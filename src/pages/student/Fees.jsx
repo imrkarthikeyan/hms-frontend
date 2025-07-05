@@ -58,7 +58,7 @@ export default function Fees(){
 
 
     return (
-    <div className="flex justify-center items-start mt-10 min-h-screen">
+    <div className="flex justify-center items-start mt-25 min-h-screen">
         <div className="flex flex-col gap-5 w-full max-w-xl px-10">
         <h2 className="font-bold text-center text-2xl">Fees Details</h2>
 

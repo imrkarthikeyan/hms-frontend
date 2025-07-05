@@ -57,7 +57,7 @@ export default function UpdateMenu(){
 
 
     return(
-        <div className="p-6 w-full max-w-xl mx-auto">
+        <div className="p-6 w-full mt-10 max-w-xl mx-auto">
             <h2 className="font-bold text-2xl py-6">Update Mess Menu</h2>
             {error && <div className="text-red-600">{error}</div>}
             {message && <div className="text-green-600">{message}</div>}

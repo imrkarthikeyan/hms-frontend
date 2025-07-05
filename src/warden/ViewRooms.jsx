@@ -54,7 +54,7 @@ export default function ViewRooms(){
     };
 
     return (
-        <div className="p-6">
+        <div className="p-6 mt-10">
         <h2 className="text-2xl font-semibold mb-4">All Hostel Rooms</h2>
 
         <form onSubmit={handleCreateRoom} className="mb-6 bg-white p-4 shadow rounded w-full max-w-lg">

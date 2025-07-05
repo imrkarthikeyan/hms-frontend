@@ -9,7 +9,7 @@ export default function WardenSidebar(){
 
     return(
         <div className="w-70 bg-gray-800 text-white p-4 fixed h-screen">
-            <h2 className="text-2xl font-bold mb-6 mt-5">Warden Panel</h2>
+            <h2 className="text-2xl font-bold mb-6 mt-16">Warden Panel</h2>
             <nav className="flex flex-col gap-8">
                 <Link to="/warden/dashboard/profile">Profile</Link>
                 <Link to="/warden/dashboard/students">View Students</Link>

@@ -64,7 +64,7 @@ export default function UpdateFees(){
 
     return(
         <div className="p-6">
-            <h2 className="font-bold text-2xl mb-4">Update Fees Status</h2>
+            <h2 className="font-bold text-2xl mb-4 mt-10">Update Fees Status</h2>
             {message && <p className="text-green-500">{message}</p>}
 
             <table className="w-full border border-gray-300">

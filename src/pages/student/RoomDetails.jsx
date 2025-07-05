@@ -54,8 +54,8 @@ export default function RoomDetails(){
 
     return (
     <div className="min-h-screen flex justify-center items-start pt-10">
-        <div className="bg-white p-10 rounded shadow w-full max-w-2xl">
-        <h2 className="font-bold text-2xl text-center mb-8">Room Details</h2>
+        <div className="bg-white p-7 rounded shadow-2xl mt-15 w-full max-w-2xl">
+        <h2 className="font-bold text-2xl text-center mb-8 border-b-2 border-gray-200 pb-5">Room Details</h2>
 
         <table className="w-full table-fixed border-separate border-spacing-y-4 border-spacing-x-6 mb-10">
             <tbody>

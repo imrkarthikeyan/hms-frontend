@@ -56,7 +56,7 @@ export default function ManageVisitors(){
 
 
     return(
-        <div className="p-6 w-full">
+        <div className="p-6 mt-8 w-full">
             <h2 className="font-bold text-2xl py-6">Manage Visitor Requests</h2>
 
             {requests.length===0 ? (

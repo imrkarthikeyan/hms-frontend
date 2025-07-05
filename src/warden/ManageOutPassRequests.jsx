@@ -59,7 +59,7 @@ export default function ManageOutPassRequests(){
 
 
     return(
-        <div className="p-6 w-full rounded">
+        <div className="p-6 w-full mt-10 rounded">
             <h2 className="font-bold text-2xl py-6">Manage Out Pass Requests</h2>
 
             {message && <div className="text-green-500 mb-4">{message}</div>}

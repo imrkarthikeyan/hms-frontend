@@ -9,7 +9,7 @@ export default function Sidebar(){
 
     return(
         <div className="w-70 bg-gray-800 text-white p-4 fixed h-screen">
-            <h2 className="text-2xl font-bold mb-6 mt-5">Student Panel</h2>
+            <h2 className="text-2xl font-bold mb-6 mt-16">Student Panel</h2>
             <nav className="flex flex-col gap-8">
                 <Link to="/student/dashboard/profile">Profile</Link>
                 <Link to="/student/dashboard/room">Room Details</Link>

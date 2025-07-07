@@ -2,6 +2,7 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react"
 import { useNavigate } from "react-router-dom";
 import { auth } from "../../firebase";
+import ksr from '../../assets/ksr.jpeg';
 
 export default function SignupStudent(){
 
@@ -64,20 +65,40 @@ export default function SignupStudent(){
     }
 
 
-    return(
-        <div>
-            <h2 className="text-center mt-20 text-3xl font-bold">Student Register</h2>
-            <form onSubmit={handleSubmit} className="p-6 max-w-md mx-auto mt-10 bg-gray-300 flex flex-col gap-6 rounded shadow">
-                <input type="text" placeholder="Full Name" name="name" value={form.name} onChange={handleChange} className="input border p-1 pl-3 rounded" required/>
-                <input type="email" placeholder="Email" name="email" value={form.email} onChange={handleChange} className="input border p-1 pl-3 rounded" required/>
-                <input type="password" placeholder="Password" name="password" value={form.password} onChange={handleChange} className="input border p-1 pl-3 rounded" required/>
-                <input name="contactNumber" placeholder="Contact Number" value={form.contactNumber} onChange={handleChange} className="input border p-1 pl-3 rounded" required/>
-                <input name="collegeName"  placeholder="College Name" value={form.collegeName} onChange={handleChange} className="input border p-1 pl-3 rounded" required/>
-                <input name="roomNumber" value={form.roomNumber} onChange={handleChange} placeholder="Room Number" className="input border p-1 pl-3 rounded" required/>
-                <div className="text-center">
-                    <button type="submit" className="bg-[Green] w-25 p-2 text-white rounded" disabled={loading} >{loading?'Signing Up...':'Sign Up'}</button>
+    return (
+    <div className="flex flex-col min-h-screen">
+        <div className="bg-gray-800 t-0 w-full fixed text-white p-4 flex items-center border-b border-gray-500 z-10 pl-5 h-[65px]">
+            <div className="w-full flex justify-between items-center">
+                <div className="text-yellow-300 font-bold flex gap-6 items-center">
+                <img src={ksr} alt="hms" className="h-10 w-10 rounded-xl" />
+                <div>
+                    <h2>K. S. Rangasamy College of Technology</h2>
+                    <h3>Hostel Management System</h3>
                 </div>
-            </form>
+                </div>
+                <div className="mr-5">
+                <h2>Home</h2>
+                </div>
+            </div>
         </div>
-    )
+        <div className="flex flex-1 items-center justify-center mt-[65px]">
+        <form onSubmit={handleSubmit} className="p-6 w-full max-w-md mt-10 border border-none shadow-xl flex flex-col gap-6 rounded shadow">
+            <h2 className="text-center text-3xl font-bold">Student Register</h2>
+            <input type="text" placeholder="Full Name" name="name" value={form.name} onChange={handleChange} className="border p-2 pl-3 rounded" required />
+            <input type="email" placeholder="Email" name="email" value={form.email} onChange={handleChange} className="border p-2 pl-3 rounded" required />
+            <input type="password" placeholder="Password" name="password" value={form.password} onChange={handleChange} className="border p-2 pl-3 rounded" required/>
+            <input name="contactNumber" placeholder="Contact Number" value={form.contactNumber} onChange={handleChange} className="border p-2 pl-3 rounded" required />
+            <input name="collegeName" placeholder="College Name" value={form.collegeName} onChange={handleChange} className="border p-2 pl-3 rounded" required/>
+            <input name="roomNumber" placeholder="Room Number" value={form.roomNumber} onChange={handleChange} className="border p-2 pl-3 rounded" required/>
+            <div className="text-center">
+                <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded w-full hover:bg-blue-700" disabled={loading}>
+                    {loading ? "Signing Up..." : "Sign Up"}
+                </button>
+            </div>
+        </form>
+        </div>
+        <p className="text-center mt-auto mb-7">© created by <span className="text-blue-700">rkarthikeyan</span></p>
+    </div>
+    );
+
 }

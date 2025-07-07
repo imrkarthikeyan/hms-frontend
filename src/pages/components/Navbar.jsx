@@ -32,18 +32,16 @@ export default function Navbar(){
 
 
     return(
-        <div className="fixed bg-gray-800  w-full text-white p-4 flex  pb-6 items-center border-b-1 border-gray-500 z-1 pl-5 h-[65px]">
-            <div className='v-screen justify-between items-center w-full flex fixed'>
+        <div className="bg-gray-800 t-0 w-full fixed text-white p-4 flex items-center border-b border-gray-500 z-10 pl-5 h-[65px]">
+            <div className="w-full flex justify-between items-center">
                 <div className="text-yellow-300 font-bold flex gap-6 items-center">
-                    <div className=''>
-                        <img src={ksr} alt="hms" className='h-10 w-10 rounded-xl'/>
-                    </div>
-                    <div className=''>
-                        <h2 className="">K. S. Rangasamy College of Technology</h2>
-                        <h3>Hostel Manangement System</h3>
+                    <img src={ksr} alt="hms" className="h-10 w-10 rounded-xl" />
+                    <div>
+                      <h2>K. S. Rangasamy College of Technology</h2>
+                      <h3>Hostel Management System</h3>
                     </div>
                 </div>
-                <div className="mr-10 ">
+                <div className="mr-5">
                     <h2>{student.name}</h2>
                 </div>
             </div>

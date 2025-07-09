@@ -29,7 +29,7 @@ export default function UpdateFees(){
     };
 
     const handleUpdate=async(studentId)=>{
-        const student=students.find((s)=>signInAnonymously.id===studentId);
+        const student=students.find((s)=>s.id===studentId);
         const newStatus=updatedFees[studentId];
 
         if(!newStatus  || newStatus===student.feesStatus){

@@ -39,15 +39,15 @@ export default function WardenProfile(){
                 <table className="w-full table-fixed border-separate border-spacing-y-4 border-spacing-x-6">
                     <tbody>
                         <tr>
-                            <td className="font-semibold w-1/3">Name:</td>
+                            <td className="font-semibold w-1/3">Name :</td>
                             <td>{warden.name}</td>
                         </tr>
                         <tr>
-                            <td className="font-semibold">Email:</td>
+                            <td className="font-semibold">Email :</td>
                             <td>{warden.email}</td>
                         </tr>
                         <tr>
-                            <td className="font-semibold">Contact No:</td>
+                            <td className="font-semibold">Contact No :</td>
                             <td>{warden.contactNumber}</td>
                         </tr>
                     </tbody>

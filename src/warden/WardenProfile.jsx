@@ -12,7 +12,7 @@ export default function WardenProfile(){
             };
 
             try{
-                const res=await fetch(`http://localhost:8080/api/wardens/firebase/${warden.firebaseUid}`);
+                const res=await fetch(`https://hms-backend-aqwe.onrender.com/api/wardens/firebase/${warden.firebaseUid}`);
                 const data=await res.json();
                 console.log("Fetched Warden:", data);
                 setWarden(data);

@@ -39,7 +39,7 @@ export default function SignupStudent(){
                 firebaseUid:firebaseUid
             };
 
-            const res=await fetch('http://localhost:8080/api/students',{
+            const res=await fetch('https://hms-backend-aqwe.onrender.com/api/students',{
                 method:'POST',
                 headers:{'Content-Type':'application/json'},
                 body:JSON.stringify(studentData)

@@ -17,7 +17,7 @@ export default function LoginStudent(){
       const userCred=await login(email,password);
       const firebaseUid=userCred.user.uid;
 
-      const response=await fetch(`http://localhost:8080/api/students/firebase/${firebaseUid}`);
+      const response=await fetch(`https://hms-backend-aqwe.onrender.com/api/students/firebase/${firebaseUid}`);
       if(!response.ok){
         throw new Error("Student record not found")
       };

@@ -10,7 +10,7 @@ export default function AssignStudent(){
 
   useEffect(()=>{
     const fetchStudents=async()=>{
-      const res=await fetch("http://localhost:8080/api/students");
+      const res=await fetch("https://hms-backend-aqwe.onrender.com/api/students");
       const data=await res.json();
       setStudents(data);
    };
@@ -19,7 +19,7 @@ export default function AssignStudent(){
 
   useEffect(()=>{
     const fetchRooms=async()=>{
-      const res=await fetch("http://localhost:8080/api/rooms");
+      const res=await fetch("https://hms-backend-aqwe.onrender.com/api/rooms");
       const data=await res.json();
       setRooms(data);
    };
@@ -28,7 +28,7 @@ export default function AssignStudent(){
 
   useEffect(()=>{
     const fetchWardens=async()=>{
-      const res=await fetch("http://localhost:8080/api/wardens");
+      const res=await fetch("https://hms-backend-aqwe.onrender.com/api/wardens");
       const data=await res.json();
       setWardens(data);
    };
@@ -52,7 +52,7 @@ export default function AssignStudent(){
     }
 
     try{
-      const res=await fetch(`http://localhost:8080/api/students/${studentId}/assign`,{
+      const res=await fetch(`https://hms-backend-aqwe.onrender.com/api/students/${studentId}/assign`,{
         method:"PUT",
         headers:{"Content-Type":"application/json"},
         body:JSON.stringify({roomId,wardenId})

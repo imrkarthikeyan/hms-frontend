@@ -20,7 +20,7 @@ export default function SubmitComplaint(){
         };
 
         try{
-            const res=await fetch(`http://localhost:8080/api/complaints/student/${student.id}`, {
+            const res=await fetch(`https://hms-backend-aqwe.onrender.com/api/complaints/student/${student.id}`, {
                 method:'POST',
                 headers:{'Content-Type':'application/json'},
                 body:JSON.stringify(complaintData)

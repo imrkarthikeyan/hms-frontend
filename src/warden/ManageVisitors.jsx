@@ -8,7 +8,7 @@ export default function ManageVisitors(){
     useEffect(()=>{
         const fetchRequests=async()=>{
             try{
-                const res=await fetch("http://localhost:8080/api/parent-visits");
+                const res=await fetch("https://hms-backend-aqwe.onrender.com/api/parent-visits");
                 if(!res.ok){
                     throw new Error('Failed to fetch visit requests');
                 }
@@ -29,7 +29,7 @@ export default function ManageVisitors(){
             const request=requests.find(r=>r.id===id);
             const updated={...request, status: newStatus};
 
-            const res=await fetch(`http://localhost:8080/api/parent-visits/${id}`,{
+            const res=await fetch(`https://hms-backend-aqwe.onrender.com/api/parent-visits/${id}`,{
                 method: "PUT",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(updated)

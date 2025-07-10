@@ -12,7 +12,7 @@ export default function Profile(){
             };
 
             try{
-                const res=await fetch(`http://localhost:8080/api/students/firebase/${stored.firebaseUid}`);
+                const res=await fetch(`https://hms-backend-aqwe.onrender.com/api/students/firebase/${stored.firebaseUid}`);
                 const data=await res.json();
                 setStudent(data);
             }

@@ -24,7 +24,7 @@ export default function VisitRequest(){
         };
 
         try{
-            const res=await fetch(`http://localhost:8080/api/parent-visits/student/${student.id}`,{
+            const res=await fetch(`https://hms-backend-aqwe.onrender.com/api/parent-visits/student/${student.id}`,{
                 method:"POST",
                 headers:{'Content-Type':'application/json'},
                 body:JSON.stringify(requestData)

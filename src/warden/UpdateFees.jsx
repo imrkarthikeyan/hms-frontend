@@ -8,7 +8,7 @@ export default function UpdateFees(){
 
     const fetchStudents=async()=>{
         try{
-            const res=await fetch("http://localhost:8080/api/students");
+            const res=await fetch("https://hms-backend-aqwe.onrender.com/api/students");
             const data=await res.json();
             setStudents(data);
         }
@@ -40,7 +40,7 @@ export default function UpdateFees(){
         const updatedStudent={...student, feesStatus:newStatus};
 
         try{
-            const res=await fetch(`http://localhost:8080/api/students/${studentId}`,{
+            const res=await fetch(`https://hms-backend-aqwe.onrender.com/api/students/${studentId}`,{
                 method:"PUT",
                 headers:{"Content-Type":"application/json"},
                 body:JSON.stringify(updatedStudent)

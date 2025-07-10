@@ -13,7 +13,7 @@ export default function UpdateMenu(){
     useEffect(()=>{
         const fetchMenu=async()=>{
             try{
-                const res=await fetch(`http://localhost:8080/api/mess-menu/date/${date}`);
+                const res=await fetch(`https://hms-backend-aqwe.onrender.com/api/mess-menu/date/${date}`);
                 if(!res.ok){
                     return;
                 };
@@ -38,7 +38,7 @@ export default function UpdateMenu(){
         const menuData={date, breakfast, lunch, dinner};
 
         try{
-            const res=await fetch("http://localhost:8080/api/mess-menu",{
+            const res=await fetch("https://hms-backend-aqwe.onrender.com/api/mess-menu",{
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(menuData)

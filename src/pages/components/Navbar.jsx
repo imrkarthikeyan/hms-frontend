@@ -13,7 +13,7 @@ export default function Navbar(){
             }
 
             try{
-                const res=await fetch(`http://localhost:8080/api/students/firebase/${student.firebaseUid}`);
+                const res=await fetch(`https://hms-backend-aqwe.onrender.com/api/students/firebase/${student.firebaseUid}`);
                 const data=await res.json();
                 setStudent(data);
             }

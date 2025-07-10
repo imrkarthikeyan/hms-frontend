@@ -9,9 +9,9 @@ export default function ManageOutPassRequests(){
 
     useEffect(()=>{
         const fetchOutPassRequests=async()=>{
-            let url="http://localhost:8080/api/outpass";
+            let url="https://hms-backend-aqwe.onrender.com/api/outpass";
             if(filter!=="ALL"){
-                url=`http://localhost:8080/api/outpass/status/${filter}`;
+                url=`https://hms-backend-aqwe.onrender.com/api/outpass/status/${filter}`;
             }
             try{
                 const res=await fetch(url);
@@ -34,7 +34,7 @@ export default function ManageOutPassRequests(){
         const updated={...outpass, status:newStatus};
 
         try{
-            const res=await fetch(`http://localhost:8080/api/outpass/${id}`,{
+            const res=await fetch(`https://hms-backend-aqwe.onrender.com/api/outpass/${id}`,{
                 method:"PUT",
                 headers:{"Content-Type":"application/json"},
                 body:JSON.stringify(updated)
@@ -47,7 +47,7 @@ export default function ManageOutPassRequests(){
             setError("");
             setTimeout(()=>setMessage(""),3000);
 
-            const refetchUrl=filter==="ALL" ? "http://localhost:8080/api/outpass" : `http://localhost:8080/api/outpass/status/${filter}`;
+            const refetchUrl=filter==="ALL" ? "https://hms-backend-aqwe.onrender.com/api/outpass" : `https://hms-backend-aqwe.onrender.com/api/outpass/status/${filter}`;
             const data=await(await fetch(refetchUrl)).json();
             setOutPassRequests(data);
         }

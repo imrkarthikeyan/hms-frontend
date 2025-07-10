@@ -14,7 +14,7 @@ export default function ViewStudents(){
             }
 
             try{
-                const res=await fetch("http://localhost:8080/api/students");
+                const res=await fetch("https://hms-backend-aqwe.onrender.com/api/students");
                 if(!res.ok){
                     throw new Error('Failed to fetch students');
                 };

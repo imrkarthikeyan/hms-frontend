@@ -14,7 +14,7 @@ export default function PastVisitRequests(){
             }
 
             try{
-                const res=await fetch(`http://localhost:8080/api/parent-visits/student/${student.id}`);
+                const res=await fetch(`https://hms-backend-aqwe.onrender.com/api/parent-visits/student/${student.id}`);
                 if(!res.ok){
                     throw new Error('Failed to fetch past requests');
                 };

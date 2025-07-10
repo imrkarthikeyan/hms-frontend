@@ -13,7 +13,7 @@ export default function ViewComplaints(){
             }
 
             try{
-                const res=await fetch(`http://localhost:8080/api/complaints/student/${student.id}`);
+                const res=await fetch(`https://hms-backend-aqwe.onrender.com/api/complaints/student/${student.id}`);
                 if(!res.ok){
                     throw new Error('Failed to fetch complaints');
                 };

@@ -17,7 +17,7 @@ export default function LoginWarden(){
       const userCred=await login(email,password);
       const firebaseUid=userCred.user.uid;
 
-      const response=await fetch(`http://localhost:8080/api/wardens/firebase/${firebaseUid}`);
+      const response=await fetch(`https://hms-backend-aqwe.onrender.com/api/wardens/firebase/${firebaseUid}`);
       if(!response.ok){
          throw new Error("Warden not found")
       };

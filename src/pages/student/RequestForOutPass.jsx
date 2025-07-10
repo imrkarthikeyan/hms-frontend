@@ -23,7 +23,7 @@ export default function RequestForOutPass(){
         };
 
         try{
-            const res=await fetch(`http://localhost:8080/api/outpass/student/${student.id}`, {
+            const res=await fetch(`https://hms-backend-aqwe.onrender.com/api/outpass/student/${student.id}`, {
                 method:'POST',
                 headers:{'Content-Type':'application/json'},
                 body:JSON.stringify(outPassData)
@@ -54,7 +54,7 @@ export default function RequestForOutPass(){
         }
         const checkOutPassEligibility=async()=>{
             try{
-                const res=await fetch(`http://localhost:8080/api/outpass/student/${student.id}/latest`);
+                const res=await fetch(`https://hms-backend-aqwe.onrender.com/api/outpass/student/${student.id}/latest`);
                 if(!res.ok){
                     throw new Error("Failed to check out pass eligibility");
                 }

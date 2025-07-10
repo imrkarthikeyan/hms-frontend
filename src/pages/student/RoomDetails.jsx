@@ -14,7 +14,7 @@ export default function RoomDetails(){
             };
 
             try{
-                const res=await fetch(`http://localhost:8080/api/students/${stored.id}`);
+                const res=await fetch(`https://hms-backend-aqwe.onrender.com/api/students/${stored.id}`);
                 if(!res.ok){
                     throw new Error("Failed to fetch student");
                 };
@@ -26,7 +26,7 @@ export default function RoomDetails(){
                     return;
                 };
 
-                const roomRes=await fetch(`http://localhost:8080/api/rooms/${data.room.id}`);
+                const roomRes=await fetch(`https://hms-backend-aqwe.onrender.com/api/rooms/${data.room.id}`);
                 if(!roomRes.ok){
                     throw new Error("Room not found");
                 };

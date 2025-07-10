@@ -8,7 +8,7 @@ export default function ViewRooms(){
 
     const fetchRooms=async()=>{
         try{
-            const res=await fetch("http://localhost:8080/api/rooms");
+            const res=await fetch("https://hms-backend-aqwe.onrender.com/api/rooms");
             const data=await res.json();
             setRooms(data);
         }
@@ -31,7 +31,7 @@ export default function ViewRooms(){
         };
 
         try{
-        const res=await fetch("http://localhost:8080/api/rooms",{
+        const res=await fetch("https://hms-backend-aqwe.onrender.com/api/rooms",{
             method:"POST",
             headers:{"Content-Type":"application/json"},
             body:JSON.stringify(newRoom),

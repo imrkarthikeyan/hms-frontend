@@ -10,9 +10,9 @@ export default function ManageComplaints(){
 
     useEffect(()=>{
         const fetchComplaints=async()=>{
-            let url="http://localhost:8080/api/complaints";
+            let url="https://hms-backend-aqwe.onrender.com/api/complaints";
             if(filter!=="ALL"){
-                url=`http://localhost:8080/api/complaints/status/${filter}`;
+                url=`https://hms-backend-aqwe.onrender.com/api/complaints/status/${filter}`;
             }
 
             try{
@@ -36,7 +36,7 @@ export default function ManageComplaints(){
         const updated={...complaint, status: newStatus};
 
         try{
-            const res=await fetch(`http://localhost:8080/api/complaints/${id}`,{
+            const res=await fetch(`https://hms-backend-aqwe.onrender.com/api/complaints/${id}`,{
                 method: "PUT",
                 headers: {"Content-Type":"application/json"},
                 body: JSON.stringify(updated)
@@ -50,7 +50,7 @@ export default function ManageComplaints(){
             setError("");
             setTimeout(()=>setMessage(""),3000);
 
-            const refetchUrl=filter==="ALL" ? "http://localhost:8080/api/complaints" : `http://localhost:8080/api/complaints/status/${filter}`;
+            const refetchUrl=filter==="ALL" ? "https://hms-backend-aqwe.onrender.com/api/complaints" : `https://hms-backend-aqwe.onrender.com/api/complaints/status/${filter}`;
 
             const data=await(await fetch(refetchUrl)).json();
             setComplaints(data);

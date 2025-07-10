@@ -7,7 +7,7 @@ export default function MessMenu(){
     useEffect(()=>{
         const fetchMenu=async()=>{
             try{
-                const res=await fetch('http://localhost:8080/api/mess-menu/today');
+                const res=await fetch('https://hms-backend-aqwe.onrender.com/api/mess-menu/today');
                 if(!res.ok){
                     throw new Error('Failed to fetch mess menu');
                 }

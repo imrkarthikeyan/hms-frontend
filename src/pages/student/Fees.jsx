@@ -14,7 +14,7 @@ export default function Fees(){
             }
 
             try{
-                const res=await fetch(`http://localhost:8080/api/students/firebase/${stored.firebaseUid}`);
+                const res=await fetch(`https://hms-backend-aqwe.onrender.com/api/students/firebase/${stored.firebaseUid}`);
                 const data=await res.json();
                 setStudent(data);
             }
@@ -29,7 +29,7 @@ export default function Fees(){
         e.preventDefault();
 
         try{
-            const res=await fetch(`http://localhost:8080/api/fees-requests/student/${student.id}`,{
+            const res=await fetch(`https://hms-backend-aqwe.onrender.com/api/fees-requests/student/${student.id}`,{
                 method:"POST",
                 headers:{"Content-Type" : "application/json"},
                 body:JSON.stringify({

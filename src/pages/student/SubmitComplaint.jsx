@@ -59,7 +59,7 @@ export default function SubmitComplaint(){
                     </label>
                     <label className="mt-5 text-left">
                         Description :
-                        <textarea value={description} onChange={(e)=>setDescription(e.target.value)} rows="5" placeholder="Describe the issue" required className="border p-2 rounded w-full mt-4"/>
+                        <textarea value={description} onChange={(e)=>setDescription(e.target.value)} rows="5" placeholder="Describe the issue briefly" required className="border p-2 rounded w-full mt-4"/>
                     </label>
                     <div>
                         <button type="submit" className="bg-green-500 pl-2 pr-2 py-1 mt-3 rounded text-white w-30">Submit</button>

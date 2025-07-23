@@ -27,7 +27,7 @@ export default function RoleSelect(){
             </div>
             <div className='flex flex-1 items-center justify-center gap-80 pt-28 px-4'>
                 <div className='flex flex-col md:flex-row items-center justify-center gap-10 md:gap-32 w-full max-w-4xl'>
-                    <div className='p-6 pl-17 pb-13 md:pl-0 md:pb-0 w-full max-w-xs'>
+                    <div className='pl-17 pb-13 md:pl-0 md:pb-0 w-full max-w-xs'>
                         <h1 className='font-bold text-[Blue] text-3xl pb-5'>Register</h1>
                         <p className='text-gray-600 pb-5'>Don't have an account yet?</p>
                         <button onClick={()=>navigate('/signup/student')} className='bg-[Blue] cursor-pointer rounded pl-5 pr-5 pb-2 pt-2 text-white text-[18px]'>SignUp</button>
